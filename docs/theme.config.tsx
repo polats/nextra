@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import type { DocsThemeConfig } from 'nextra-theme-docs'
 import { useConfig } from 'nextra-theme-docs'
+import { RainbowKitCustomConnectButton } from 'components/RainbowKitCustomConnectButton'
 
 const logo = (
   <span>
@@ -154,6 +155,11 @@ const config: DocsThemeConfig = {
           © {new Date().getFullYear()} The Nextra Project.
         </p>
       </div>
+    )
+  },
+  navbar: {
+    extraContent: (
+      <RainbowKitCustomConnectButton />
     )
   }
 }
