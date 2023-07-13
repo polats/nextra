@@ -1,8 +1,9 @@
 import { useAccountBalance } from "hooks/scaffold-eth";
 import { getTargetNetwork } from "utils/scaffold-eth";
+import { Address } from "wagmi";
 
 type TBalanceProps = {
-  address?: string;
+  address?: Address;
   className?: string;
 };
 

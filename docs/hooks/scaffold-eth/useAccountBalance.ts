@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
-import { useBalance } from "wagmi";
+import { Address, useBalance } from "wagmi";
 import { useGlobalState } from "services/store/store";
 import { getTargetNetwork } from "utils/scaffold-eth";
 
-export function useAccountBalance(address?: string) {
+export function useAccountBalance(address?: Address) {
   const [isEthBalance, setIsEthBalance] = useState(true);
   const [balance, setBalance] = useState<number | null>(null);
   const price = useGlobalState(state => state.nativeCurrencyPrice);

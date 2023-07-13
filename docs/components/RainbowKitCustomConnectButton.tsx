@@ -4,6 +4,7 @@ import { ArrowLeftOnRectangleIcon, ArrowsRightLeftIcon, ChevronDownIcon } from "
 import { Balance, BlockieAvatar } from "./scaffold-eth";
 import { useNetworkColor } from "hooks/scaffold-eth";
 import { getTargetNetwork } from "utils/scaffold-eth";
+import { Address } from "wagmi";
 
 /**
  * Custom Wagmi Connect Button (watch balance + custom design)
@@ -51,10 +52,7 @@ export const RainbowKitCustomConnectButton = () => {
                         </button>
                       </li>
                       <li>
-                        <button className="menu-item text-error" type="button" onClick={() => disconnect()}>
-                          <ArrowLeftOnRectangleIcon className="h-6 w-4 ml-2 sm:ml-0" /> <span>Disconnect</span>
-                        </button>
-                      </li>
+/                      </li>
                     </ul>
                   </div>
                 );
@@ -64,7 +62,7 @@ export const RainbowKitCustomConnectButton = () => {
                 <div className="px-2 flex justify-end items-center">
                   <div className="flex justify-center items-center border-1 rounded-lg">
                     <div className="flex flex-col items-center mr-1">
-                      <Balance address={account.address} className="min-h-0 h-auto" />
+                      <Balance address={account.address as Address} className="min-h-0 h-auto" />
                       <span className="text-xs" style={{ color: networkColor }}>
                         {chain.name}
                       </span>
