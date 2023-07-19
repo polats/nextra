@@ -11,15 +11,6 @@ import { useState } from 'react'
 import docsCardDark from '../public/assets/card-1.dark.png'
 import docsCard from '../public/assets/card-1.png'
 import styles from './index.module.css'
-import { useAccount, useConnect, useDisconnect } from 'wagmi'
-
-
-export function AccountInfo() {
-  const { address, isConnected } = useAccount()
-  return (
-  <h3 suppressHydrationWarning={true}>{address}</h3>
-  )
-}
 
 export function File({ name, className, ...props }) {
   return (
@@ -325,7 +316,7 @@ export function I18n() {
         <Feature index={0} large centered id="docs-card" href="/docs/docs-theme/start">
           <Image src={docsCard} alt="Background" loading="eager" />
           <Image src={docsCardDark} alt="Background (Dark)" loading="eager" />
-          <AccountInfo/>
+          <h3>Full-power documentation <br className="show-on-mobile"/>in minutes.</h3>
         </Feature>
         <Feature index={1} centered className="card-with-border" href="/docs/guide/image">
           <div className="h-full flex flex-col justify-between">
