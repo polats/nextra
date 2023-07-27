@@ -11,9 +11,9 @@
     "type": "page",
     "title": "Documentation"
   },
-  "showcase": {
+  "stackverse": {
     "type": "page",
-    "title": "Showcase",
+    "title": "Stackverse",
     "theme": {
       "typesetting": "article",
       "layout": "full"
