@@ -8,11 +8,15 @@ import ReactFlow, {
   useEdgesState,
   addEdge,
   BackgroundVariant,
-  PanelPosition,
   Position
 } from 'reactflow';
+import StackNode from './StackNode';
 import 'reactflow/dist/style.css';
 import styles from './style.module.css'
+
+const nodeTypes = {
+  stack: StackNode
+}
 
 const nodeDefaults = {
   sourcePosition: Position.Bottom,
@@ -20,6 +24,7 @@ const nodeDefaults = {
   style: {
     borderRadius: '0%',
     backgroundColor: '#fff',
+    fontSize: 20,
     width: 50,
     height: 50,
     display: 'flex',
@@ -29,8 +34,8 @@ const nodeDefaults = {
 };
 
 const initialNodes = [
-  { id: '1', position: { x: 50, y: 50 }, data: { label: '🪨' }, ...nodeDefaults },
-  { id: '2', position: { x: 50, y: 150 }, data: { label: '🪵'}, ...nodeDefaults },
+  { id: '1', type: 'stack', position: { x: 50, y: 50 }, data: { label: "Rock", emoji: '🪨' } },
+  { id: '2', type: 'stack', position: { x: 50, y: 150 }, data: { label: "Wood", emoji: '🪵'} },
 ];
 const initialEdges = [{ id: 'e1-2', source: '1', target: '2' }];
 
@@ -64,6 +69,7 @@ export function Gameboard() {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        nodeTypes={nodeTypes}
         proOptions={proOptions}
       >
         <MiniMap position={"bottom-left"} zoomable pannable/>
