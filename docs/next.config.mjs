@@ -17,6 +17,16 @@ export default withNextra({
     // Eslint behaves weirdly in this monorepo.
     ignoreDuringBuilds: true
   },
+  images: {
+    remotePatterns: [
+        {
+            protocol: 'https',
+            hostname: '**',
+            port: '',
+            pathname: '**',
+        },
+    ],
+  },
   redirects: () => [
     {
       source: '/docs/docs-theme/built-ins/callout',

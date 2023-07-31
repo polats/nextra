@@ -34,8 +34,21 @@ const nodeDefaults = {
 };
 
 const initialNodes = [
-  { id: '1', type: 'stack', position: { x: 50, y: 50 }, data: { label: "Rock", emoji: '🪨' } },
-  { id: '2', type: 'stack', position: { x: 50, y: 150 }, data: { label: "Wood", emoji: '🪵'} },
+  { id: '1', type: 'stack', position: { x: 50, y: 50 }, 
+    data: { 
+        label: "Arcadian #1", 
+        image:  "https://images.arcadians.io/arcadian-205ed7da-2e72-4264-8ff7-b412c9ec3cd6.png",
+        emoji: '😄' 
+      } 
+  },
+  { id: '2', type: 'stack', position: { x: 200, y: 200 }, 
+  data: { 
+    label: "Valorous Blade", 
+    image:  "https://arcadians.prod.outplay.games/v2/items/image/259",
+    emoji: '🗡️' 
+    } 
+  },
+,
 ];
 const initialEdges = [{ id: 'e1-2', source: '1', target: '2' }];
 
