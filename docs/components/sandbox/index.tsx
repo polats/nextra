@@ -48,6 +48,44 @@ const initialNodes = [
     emoji: '🗡️' 
     } 
   },
+  { id: '3', type: 'stack', position: { x: 400, y: 50 }, 
+  data: { 
+    label: "Renderer (XGR)", 
+    emoji: '🎮' 
+    } 
+  },
+  { id: '4', type: 'stack', position: { x: 400, y: 150 }, 
+  data: { 
+    label: "Self (OpenAI)", 
+    emoji: '🎭' 
+    } 
+  },
+  { id: '5', type: 'stack', position: { x: 400, y: 250 }, 
+  data: { 
+    label: "Voice (RunwayML)", 
+    emoji: '🗣️' 
+    } 
+  },
+  { id: '6', type: 'stack', position: { x: 400, y: 350 }, 
+  data: { 
+    label: "Art (Midjourney)", 
+    emoji: '🎨' 
+    } 
+  },
+  { id: '7', type: 'stack', position: { x: 400, y: 450 }, 
+  data: { 
+    label: "Lore (Laika)", 
+    emoji: '✒️' 
+    } 
+  },
+  { id: '8', type: 'stack', position: { x: 600, y: 50 }, 
+  data: { 
+      label: "NFT2NPC Arcadian", 
+      image:  "https://images.arcadians.io/arcadian-205ed7da-2e72-4264-8ff7-b412c9ec3cd6.png",
+      emoji: '😄' 
+    } 
+},
+
 ,
 ];
 const initialEdges = [{ id: 'e1-2', source: '1', target: '2' }];
