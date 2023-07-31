@@ -11,9 +11,9 @@
     "type": "page",
     "title": "Documentation"
   },
-  "stackverse": {
+  "sandbox": {
     "type": "page",
-    "title": "Stackverse",
+    "title": "Sandbox",
     "theme": {
       "typesetting": "article",
       "layout": "full"
